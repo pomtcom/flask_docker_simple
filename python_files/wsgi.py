@@ -1,12 +1,10 @@
 from app import app
 import sys
 
-# print('input port is: ', sys.argv[1])
-
 flask_port = 5000
 
 if len(sys.argv) == 2:
-    print('input port is: ', sys.argv[1])
+    print('input port from command line is: ', sys.argv[1])
     flask_port = sys.argv[1]
 
 
