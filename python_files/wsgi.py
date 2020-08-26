@@ -9,4 +9,4 @@ if len(sys.argv) == 2:
 
 
 if __name__ == "__main__":
-    app.run(port=flask_port)
+    app.run(host='0.0.0.0', port=flask_port)
