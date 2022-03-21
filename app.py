@@ -18,9 +18,9 @@ def hello_world():
     return 'hello world'
 
 
-@app.route('/api/smartinfra1')
+@app.route('/api/poc-backend1')
 def smart_infra_1():
-    print('api smart infra1 is executing')
+    print('api poc-backend1 is executing')
 
     response_body = {'username': 'tawatchai', 'status': 'ok'}
     reseponse = jsonify(response_body)
