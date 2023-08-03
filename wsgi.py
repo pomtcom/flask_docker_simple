@@ -1,7 +1,7 @@
 from app import app
 import sys
 
-flask_port = 5000
+flask_port = 5001
 
 if len(sys.argv) == 2:
     print('input port from command line is: ', sys.argv[1])

@@ -1,11 +1,13 @@
 from flask import Flask, redirect, request, json, jsonify
-
+from flask_cors import CORS, cross_origin
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.route('/healthcheck')
 def healthcheck():
-    return 'healthcheck is working'
+    return "Hello, cross-origin-world!"
 
 
 @app.route('/welcomepage')
@@ -35,3 +37,9 @@ def precheck():
     # device_id = body["deviceId"]
     return_body = {'test_return_key': 'test_return_value'}
     return jsonify(return_body)
+
+
+@app.route("/crosstest")
+@cross_origin()
+def helloWorld():
+  return "Hello, cross-origin-world!"
